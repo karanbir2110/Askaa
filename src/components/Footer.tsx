@@ -1,10 +1,10 @@
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -14,13 +14,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-[#1a237e] font-bold text-xl">A</span>
-              </div>
               <span className="text-2xl font-bold">ASKAA Media</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Transforming businesses through innovative digital marketing solutions.
+              Transforming businesses through innovative digital marketing
+              solutions.
             </p>
           </div>
 
@@ -29,7 +27,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <button
-                  onClick={() => scrollToSection('home')}
+                  onClick={() => scrollToSection("home")}
                   className="text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   Home
@@ -37,7 +35,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => scrollToSection("services")}
                   className="text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   Services
@@ -45,7 +43,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('about')}
+                  onClick={() => scrollToSection("about")}
                   className="text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   About Us
@@ -53,7 +51,7 @@ export default function Footer() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection("contact")}
                   className="text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   Contact Us
@@ -77,7 +75,6 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact Info</h3>
             <ul className="space-y-3">
-              
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="flex-shrink-0" />
                 <span className="text-gray-300">+91 8803880397</span>
@@ -93,16 +90,26 @@ export default function Footer() {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-300 text-sm">
-              &copy; 2023 ASKAA Media. All rights reserved. {/* Changed from {new Date().getFullYear()} to 2023 */}
+              &copy; 2023 ASKAA Media. All rights reserved.{" "}
+              {/* Changed from {new Date().getFullYear()} to 2023 */}
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a
+                href="#"
+                className="text-gray-300 hover:text-white transition-colors duration-300"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a
+                href="#"
+                className="text-gray-300 hover:text-white transition-colors duration-300"
+              >
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">
+              <a
+                href="#"
+                className="text-gray-300 hover:text-white transition-colors duration-300"
+              >
                 Cookie Policy
               </a>
             </div>

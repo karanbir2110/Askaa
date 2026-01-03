@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent } from "react";
 import {
   Phone,
   Mail,
@@ -8,38 +8,39 @@ import {
   Instagram,
   Send,
   CheckCircle,
-} from 'lucide-react';
-import { supabase } from '../lib/supabase';
+} from "lucide-react";
+import { supabase } from "../lib/supabase";
 
 // 🔥 Confirms component is mounted
-console.log('🔥 Contact component rendered');
+console.log("🔥 Contact component rendered");
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] =
-    useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     // ✅ STEP 3: Form submit confirmation
-    console.log('STEP 3 → Form data:', formData);
+    console.log("STEP 3 → Form data:", formData);
 
     setIsSubmitting(true);
-    setSubmitStatus('idle');
+    setSubmitStatus("idle");
 
     try {
       // ✅ STEP 4: Supabase response log
       const { data, error } = await supabase
-        .from('contact_submissions')
+        .from("contact_submissions")
         .insert([
           {
             name: formData.name,
@@ -51,21 +52,21 @@ export default function Contact() {
         ])
         .select();
 
-      console.log('STEP 4 → Supabase response:', { data, error });
+      console.log("STEP 4 → Supabase response:", { data, error });
 
       if (error) throw error;
 
-      setSubmitStatus('success');
+      setSubmitStatus("success");
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        message: "",
       });
     } catch (err) {
-      console.error('❌ Error submitting contact form:', err);
-      setSubmitStatus('error');
+      console.error("❌ Error submitting contact form:", err);
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -79,7 +80,8 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to grow your business? Contact us today for a free consultation
+            Ready to grow your business? Contact us today for a free
+            consultation
           </p>
         </div>
 
@@ -141,7 +143,7 @@ export default function Contact() {
                 Send us a Message
               </h3>
 
-              {submitStatus === 'success' && (
+              {submitStatus === "success" && (
                 <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-center space-x-3">
                   <CheckCircle className="text-green-600" size={24} />
                   <p className="text-green-800 font-medium">
@@ -150,7 +152,7 @@ export default function Contact() {
                 </div>
               )}
 
-              {submitStatus === 'error' && (
+              {submitStatus === "error" && (
                 <div className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4">
                   <p className="text-red-800 font-medium">
                     Something went wrong. Please try again.
@@ -215,7 +217,7 @@ export default function Contact() {
                   className="w-full bg-[#1a237e] text-white px-6 py-4 rounded-lg flex items-center justify-center space-x-2"
                 >
                   <span>
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? "Sending..." : "Hit a Strategy Call"}
                   </span>
                   <Send size={20} />
                 </button>
