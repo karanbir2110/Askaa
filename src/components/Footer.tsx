@@ -14,12 +14,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-<<<<<<< HEAD
-=======
+
                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 {/* <span className="text-[#1a237e] font-bold text-xl">A</span> */}
               </div>
->>>>>>> e287bdbae6555e09b0edf3ed8da7866f2f3e07bd
               <span className="text-2xl font-bold">ASKAA Media</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
