@@ -217,7 +217,11 @@ export default function Contact() {
                   className="w-full bg-[#1a237e] text-white px-6 py-4 rounded-lg flex items-center justify-center space-x-2"
                 >
                   <span>
+<<<<<<< HEAD
                     {isSubmitting ? "Sending..." : "Hit a Strategy Call"}
+=======
+                    {isSubmitting ? 'Sending...' : 'Book a Strategy Call'}
+>>>>>>> e287bdbae6555e09b0edf3ed8da7866f2f3e07bd
                   </span>
                   <Send size={20} />
                 </button>
