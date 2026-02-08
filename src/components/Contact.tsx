@@ -2,6 +2,7 @@ import { useState, FormEvent } from "react";
 import {
   Phone,
   Mail,
+  MapPin,
   Facebook,
   Twitter,
   Linkedin,
@@ -95,13 +96,6 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-  
-                  <div>
-                    
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[#1a237e] rounded-lg flex items-center justify-center">
                     <Mail className="text-white" size={24} />
                   </div>
@@ -110,6 +104,33 @@ export default function Contact() {
                       Email
                     </h4>
                     <p className="text-gray-600">askaamedia@gmail.com</p>
+                  </div>
+                </div>
+
+                {/* Location 1 */}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-[#1a237e] rounded-lg flex items-center justify-center">
+                    <MapPin className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg text-[#1a237e]">
+                      Vikaspuri, Delhi
+                    </h4>
+                    
+                  </div>
+                </div>
+
+                {/* Location 2 */}
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-[#1a237e] rounded-lg flex items-center justify-center">
+                    <MapPin className="text-white" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg text-[#1a237e]">
+                     Wagholi, Pune
+                    </h4>
+                
+  
                   </div>
                 </div>
               </div>

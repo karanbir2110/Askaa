@@ -15,9 +15,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
 
-               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+               {/* <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center"> */}
                 {/* <span className="text-[#1a237e] font-bold text-xl">A</span> */}
-              </div>
+              {/* </div> */}
               <span className="text-2xl font-bold">ASKAA Media</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
